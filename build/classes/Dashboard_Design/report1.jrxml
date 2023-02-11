@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4d1fa809-3acd-4346-9086-4065786d4709">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select nic,name,vname,firstdosestatus,seconddosestatus from dosestatus]]>
+	</queryString>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstdosestatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="seconddosestatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="119" y="0" width="311" height="54" uuid="17a4733d-81ea-48f7-a33d-44ca4818a26f"/>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Dose Data Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="23" width="67" height="20" uuid="b45062cd-3d43-413c-9461-8f331f565e00"/>
+				<box>
+					<pen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="23" width="82" height="20" uuid="5adece90-bf85-4a45-b649-98f077f4e600"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="23" width="83" height="20" uuid="fd9f5625-93c1-40d4-a61b-b6b9b6f855ee"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[First Dose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="23" width="89" height="20" uuid="96c4d265-33ca-4109-afd3-44090cfd006f"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Second Dose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="23" width="102" height="20" uuid="36517460-e503-4ef2-8649-17142593bc4e"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Vaccine Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="0" width="67" height="20" uuid="d043bca1-4d8a-4329-b2f8-fa548bb809da"/>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="83" height="20" uuid="8ee047f0-c0ab-4af4-98b9-dec1fd3d4039"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{firstdosestatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="454" y="0" width="89" height="20" uuid="2a531f59-704f-4fbe-83eb-d81b07e182db"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{seconddosestatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="0" width="102" height="20" uuid="30564112-e2e9-431d-b1a1-c07949707b41"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="82" height="20" uuid="5a9c5aa8-0522-4ed2-9a9d-5806a25a46ae"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
